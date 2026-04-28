@@ -127,6 +127,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jLabel5AncestorAdded(evt);
@@ -179,12 +182,14 @@ public class NewJFrame extends javax.swing.JFrame {
     String password = new String(passCharacters);
     String confirmPassword = new String(confirmCharacters);
     
-   
-    if (!password.equals(confirmPassword)) {
+   if((password.isEmpty())&&confirmPassword.isEmpty()){
+       jLabel5.setText("Password's can't be empty");
+   }
+    else if (!password.equals(confirmPassword)) {
         jLabel5.setText("Passwords do not match");
     } else {
-        jLabel5.setText("THe password is "+password);
-        jLabel6.setText("The username is "+user.getText());
+        jLabel5.setText("The username is "+user.getText());
+        jLabel6.setText("THe password is "+password);
     }
     
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -198,6 +203,9 @@ public class NewJFrame extends javax.swing.JFrame {
         user.setText("");
         pass.setText("");
         confirmpass.setText("");
+        jLabel5.setText("");
+        jLabel6.setText("");
+
 
                 
     }//GEN-LAST:event_jButton2ActionPerformed

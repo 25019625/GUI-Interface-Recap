@@ -6,7 +6,10 @@ package practicals1_2026;
 
 /**
  *
- * @author ramas
+ * @author Magavha Murunwa Angela 
+ * 
+ * 
+ * 
  */
 public class Practicals1_2026 {
 
